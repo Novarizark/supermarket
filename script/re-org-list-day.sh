@@ -3,6 +3,7 @@
 ######################################################
 # Only take out the 1 2 3 columns from splited files
 #
+#
 #                               L_Zealot
 ######################################################
 for FILE in ../data/splited-noreject/* 
