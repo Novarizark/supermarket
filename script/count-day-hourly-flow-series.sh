@@ -5,9 +5,9 @@ do
     BNAME=$(basename $FILE)
     FLOW=""
     for STR in ${HOUR[@]}; do
-        FLOW=$FLOW,$(grep " $STR" $FILE | wc -l)
+        FLOW=$(grep " $STR" $FILE | wc -l)
+        echo ${BNAME:2:8}$STR","$FLOW  >> ../data/daily-flow-full-record/uniq/houly-day-flow-series-${BNAME:0:1}
     done
 
-    echo ${BNAME:2:8}$FLOW >> ../data/daily-flow-full-record/uniq/houly-day-flow-${BNAME:0:1}
     echo $FILE
 done

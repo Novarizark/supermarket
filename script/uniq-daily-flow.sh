@@ -1,9 +1,8 @@
 #!/bin/sh
-POS=D
-for FILE in ../data/daily-flow/$POS/d* 
+for FILE in ../data/daily-flow-full-record/uniq/?-201????? 
 #for FILE in ../data/test/* 
 do
     BNAME=$(basename $FILE)
-    cat $FILE | sort -u -t ',' -k 2 >> ../data/daily-flow/$POS/uniq/${BNAME:1:8}u
+    cat $FILE | uniq >> ../data/daily-flow-full-record/uniq/${BNAME}u
     echo $FILE
 done
