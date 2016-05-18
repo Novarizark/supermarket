@@ -5,10 +5,10 @@ from datetime import datetime
 plt.style.use('presentation')
 
 daily_flow_head = ['date', 'flow']
-flow_a_daily = pd.Series.from_csv('../data/daily-flow-full-record/uniq/daily-flow-A', parse_dates=True)
-flow_b_daily = pd.Series.from_csv('../data/daily-flow-full-record/uniq/daily-flow-B', parse_dates=True)
-flow_c_daily = pd.Series.from_csv('../data/daily-flow-full-record/uniq/daily-flow-C', parse_dates=True)
-flow_d_daily = pd.Series.from_csv('../data/daily-flow-full-record/uniq/daily-flow-D', parse_dates=True)
+flow_a_daily = pd.Series.from_csv('../data/daily-flow-full-record/flow/daily-flow-A', parse_dates=True)
+flow_b_daily = pd.Series.from_csv('../data/daily-flow-full-record/flow/daily-flow-B', parse_dates=True)
+flow_c_daily = pd.Series.from_csv('../data/daily-flow-full-record/flow/daily-flow-C', parse_dates=True)
+flow_d_daily = pd.Series.from_csv('../data/daily-flow-full-record/flow/daily-flow-D', parse_dates=True)
 
 #process flow
 flow_a_weekly=flow_a_daily.resample('W', closed='left', label='medium').mean()
